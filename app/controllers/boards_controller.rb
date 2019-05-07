@@ -23,6 +23,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
+    @board.user_id = current_user.id
     @board.save
     respond_with(@board)
   end 
