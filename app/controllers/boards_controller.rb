@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    @boards = Board.all
+    @boards = current_user.boards.all
   end 
 
   def show
