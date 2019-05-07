@@ -46,8 +46,16 @@
 // resort if you really truly can't style your content more generally.
 // @import 'sections/profile_page';
 
+body{
+  background:#428bca;
+  color:white;
+}
+body a{
+  color:white;
+}
+
 .board-tile {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.5);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
   height:10em;
@@ -62,7 +70,7 @@ img {
 
 /* On mouse-over, add a deeper shadow */
 .board-tile:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(255,255,255, 0.5);
 }
 
 /* Add some padding inside the card container */
@@ -70,6 +78,7 @@ img {
   padding: 2px 16px;
 }
 .container a {text-decoration: none; }
+.board-name a {text-decoration: none; }
 
 .boards-container{
   display: flex;
@@ -79,3 +88,13 @@ img {
   align:right;
   background-color:blue;
 }
+.board-page{
+  height:100vh;
+}
+.board-title{
+  padding-left:30px;
+}
+.navbar{
+  background-color:darken(#428bca, 6.5%);
+}
+
