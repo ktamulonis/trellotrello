@@ -1,12 +1,14 @@
  
  
 class BoardsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_board, only: [:show, :edit, :update, :destroy]
+
 
   respond_to :html, :json, :js
 
   def index
-    @boards = Board.all
+    @boards = current_user.boards.all
   end 
 
   def show
@@ -21,6 +23,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
+    @board.user_id = current_user.id
     @board.save
     respond_with(@board)
   end 
