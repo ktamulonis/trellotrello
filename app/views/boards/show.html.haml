@@ -1,0 +1,16 @@
+.container
+  .page-header
+    = link_to boards_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_board_path(@board), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show board
+
+  %dl.dl-horizontal
+    %dt Title:
+    %dd= @board.title
+    %dt User:
+    %dd= @board.user
+
