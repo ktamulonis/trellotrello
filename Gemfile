@@ -91,3 +91,12 @@ group :production do
   gem 'pg'
   gem 'lograge'
 end
+
+gem 'bootstrap-sass'
+gem 'modernizr-rails'
+gem 'meta-tags', require: 'meta_tags'
+gem 'responders', '~> 2.0'
+gem 'bh'
+gem 'simple_form'
+gem 'gibbon'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'

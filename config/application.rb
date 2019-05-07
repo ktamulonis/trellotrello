@@ -15,5 +15,12 @@ module Trellotrello
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+    config.generators do |g|
+      g.stylesheets = false
+      g.scaffold_controller "scaffold_controller"
+      g.test_framework :rspec, fixture: true, fixture_replacement: :factory_girl, helper_specs: false, view_specs: false, routing_specs: false, controller_specs: false
+    end
+  
   end
 end

@@ -56,15 +56,23 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    autoprefixer-rails (9.5.1.1)
+      execjs
     better_errors (2.5.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
+    bh (1.3.6)
+      actionpack
+      activesupport
     bindex (0.7.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.18.0)
@@ -111,8 +119,13 @@ GEM
       i18n (>= 0.7)
     fakeredis (0.7.0)
       redis (>= 3.2, < 5.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     formatador (0.2.5)
+    gibbon (3.2.0)
+      faraday (>= 0.9.1)
+      multi_json (>= 1.11.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     guard (2.15.0)
@@ -150,6 +163,10 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jquery-rails (4.3.3)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -169,13 +186,17 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    meta-tags (2.11.1)
+      actionpack (>= 3.2.0, < 6.1)
     method_source (0.9.2)
     mimemagic (0.3.3)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
+    modernizr-rails (2.7.1)
     msgpack (1.2.10)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     nenv (0.3.0)
     nio4r (2.3.1)
     nokogiri (1.10.3)
@@ -234,6 +255,9 @@ GEM
     regexp_parser (1.4.0)
     request_store (1.4.1)
       rack (>= 1.4)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -271,11 +295,17 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.0.1)
+      ffi (~> 1.9)
+      rake
     selenium-webdriver (3.142.0)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     sexp_processor (4.12.0)
     shellany (0.0.1)
+    simple_form (4.1.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -323,8 +353,10 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  bh
   binding_of_caller
   bootsnap (>= 1.1.0)
+  bootstrap-sass
   byebug
   capybara (>= 2.15)
   chromedriver-helper
@@ -334,23 +366,29 @@ DEPENDENCIES
   factory_bot_rails
   faker
   fakeredis
+  gibbon
   guard-rspec (~> 4.6.4)
   haml-rails
   happy_seed!
   jbuilder (~> 2.5)
+  jquery-rails (~> 4.3, >= 4.3.1)
   launchy
   listen (>= 3.0.5, < 3.2)
   lograge
+  meta-tags
+  modernizr-rails
   pg
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails-controller-testing
   rails_12factor
   rdiscount
+  responders (~> 2.0)
   rspec (~> 3.5.0)
   rspec-rails (~> 3.5.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)

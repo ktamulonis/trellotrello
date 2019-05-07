@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'setup#index'
+  post '/signup' => 'splash#signup', as: :splash_signup
+  get '/splash' => 'splash#index'
+  root 'splash#index'
   get '/setup/open' => 'setup#open'
   post '/setup/generate' => 'setup#generate'
   get '/setup' => 'setup#index'
