@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { }
   post '/signup' => 'splash#signup', as: :splash_signup
   get '/splash' => 'splash#index'
   root 'splash#index'
