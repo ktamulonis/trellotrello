@@ -4,5 +4,11 @@
       .board-title
         %h3
           =@board.title
-  .lists
+  .lists{:style=> 'min-height:90vh; display: flex;'}
+    -@board.lists.each do |list|
+      %li.list-tile
+        %h3 
+          =list.title
+
+
    
