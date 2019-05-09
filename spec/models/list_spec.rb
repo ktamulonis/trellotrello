@@ -9,7 +9,11 @@ RSpec.describe List, type: :model do
   	expect(build(:list, user:nil)).not_to be_valid
   end
 
-  it "must have a user" do
+  it "must have a board" do
   	expect(build(:list, board:nil)).not_to be_valid
+  end
+
+  it "must have a title" do 
+    expect(build(:list, title:nil)).not_to be_valid
   end
 end
