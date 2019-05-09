@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :oauth_callback
   attr_accessor :current_password
-  has_many :boards
-  has_many :lists
+  has_many :boards, dependent: :destroy
+  has_many :lists, dependent: :destroy
   
     
   validates_presence_of   :email, if: :email_required?
