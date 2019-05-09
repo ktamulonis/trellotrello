@@ -9,4 +9,8 @@ RSpec.describe Board, type: :model do
     expect(build :board, user:nil).not_to be_valid
   end
 
+  it "must have a title" do
+    expect(build :board, title:nil).not_to be_valid
+  end
+
 end
