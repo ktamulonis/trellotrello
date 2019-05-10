@@ -1,0 +1,9 @@
+%div{:id => "list-#{list.id}"}
+  %li.list-tile
+    %h3 
+      =list.title
+    %p
+      =list.created_at.to_s(:long)
+
+  = link_to 'Edit List', edit_board_list_path(@board, list)
+  = link_to 'Destroy', [@board,list], method: :delete, data: { confirm: 'Are you sure?' }

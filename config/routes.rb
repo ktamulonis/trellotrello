@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :lists
-  resources :boards
+  
+  resources :boards do 
+    resources :lists
+  end
   
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations',  }
   post '/signup' => 'splash#signup', as: :splash_signup
