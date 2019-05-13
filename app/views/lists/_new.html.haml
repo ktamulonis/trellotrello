@@ -1,5 +1,5 @@
 = form_for([@board, List.new]) do |form|
-  Add a list:
+  = @board.lists.count == 0 ? '+ Add a list' : '+ Add another list'
   %br/
   = form.text_area :title, size: '60x10'
   %br/

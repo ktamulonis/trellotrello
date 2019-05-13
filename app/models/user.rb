@@ -3,6 +3,7 @@ class User < ApplicationRecord
   attr_accessor :current_password
   has_many :boards, dependent: :destroy
   has_many :lists, dependent: :destroy
+  has_many :cards, dependent: :destroy
   
     
   validates_presence_of   :email, if: :email_required?
