@@ -5,7 +5,7 @@
         %h3
           =@board.title
   .lists{:style=> 'min-height:90vh; display: flex;'}    
-    = render @board.lists
+    = render @board.lists.order(position: :asc)
     = render 'lists/new', board: @board 
 
 
